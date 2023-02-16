@@ -24,7 +24,9 @@ int main(int argc, char const *argv[])
     size_t max_group=5;
     regex_t regex;
     regmatch_t regmatch[max_group];
-    
+    /*
+     * TODO: M=>simM, LR=>lr, WR=>wr, UM=>U
+     */
     result = regcomp(&regex, "(^M.+)W=([0-9\\.]+)U\\sL=([0-9\\.]+)U(\\s*$)", REG_EXTENDED);
     if (result) {
         fprintf(stderr, "Could not compile regex\n");
